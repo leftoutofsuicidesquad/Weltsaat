@@ -1,0 +1,131 @@
+/* Allgemeines Grunddesign */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header mit Titelbild */
+header.hero {
+  text-align: center;
+  background: #004d40;
+  color: white;
+  padding: 20px;
+}
+
+header.hero img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+header.hero h1 {
+  margin: 10px 0 5px;
+  font-size: 2rem;
+}
+
+header.hero p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  background: #00796b;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #004d40;
+}
+
+/* Hauptinhalt */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+/* Bild im Inhalt */
+.image-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.image-section img.main-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 800px;
+  height: 500px;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: #000;
+}
+
+/* beide Bilder liegen übereinander */
+.slideshow-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;   /* wichtig! */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow-container img.active {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #004d40;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
