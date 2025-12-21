@@ -686,6 +686,28 @@ img {
 /* ============================= */
 /*   Footer                      */
 /* ============================= */
+nav ul li a:hover {
+  color: var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Spenden Button Styling */
+nav ul li a.donate-button {
+  background-color: #e63946;
+  color: white !important;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.donate-button:hover {
+  background-color: #c1121f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 footer {
   background: var(--dark-color);
   color: rgba(255, 255, 255, 0.8);
