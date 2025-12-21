@@ -22,6 +22,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
+  padding: 0;
   background: #f8f9fa;
   color: var(--text-color);
   line-height: 1.7;
@@ -29,6 +30,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -110,8 +113,11 @@ header.hero {
   text-align: center;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
+  width: 100%;
   overflow: hidden;
+  margin: 0;
+  max-width: 100%;
 }
 
 header.hero::before {
@@ -128,8 +134,10 @@ header.hero::before {
 header.hero .container {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
 }
 
 header.hero img {
@@ -167,6 +175,9 @@ nav {
   top: 0;
   z-index: 1000;
   transition: var(--transition);
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 nav.scrolled {
@@ -180,15 +191,20 @@ nav .container {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  text-align: center;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
 }
 
 nav ul li {
@@ -232,7 +248,7 @@ nav ul > li.active > a {
   background: transparent;
 }
 
-/* Dropdown Untermenü */
+/* Dropdown Untermen� */
 nav ul li .dropdown-content {
   display: none;
   position: absolute;
@@ -290,6 +306,14 @@ nav ul li:hover > .dropdown-content {
 @media (max-width: 992px) {
   .nav-toggle {
     display: block;
+  }
+  
+  nav ul li {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin: 0 5px;
+    height: 100%;
   }
   
   nav ul {
@@ -399,7 +423,7 @@ p {
   line-height: 1.8;
 }
 
-/* Grid Layout für Inhalte */
+/* Grid Layout f�r Inhalte */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -509,17 +533,17 @@ img {
   vertical-align: middle;
 }
 
-/* Abgerundete Ecken für Bilder */
+/* Abgerundete Ecken f�r Bilder */
 .rounded {
   border-radius: 10px;
 }
 
-/* Schatten für Bilder */
+/* Schatten f�r Bilder */
 .shadow {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover-Effekt für Bilder */
+/* Hover-Effekt f�r Bilder */
 .hover-zoom {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -557,7 +581,7 @@ img {
   z-index: 1;
 }
 
-/* Navigation für die Slideshow */
+/* Navigation f�r die Slideshow */
 .slideshow-nav {
   position: absolute;
   bottom: 20px;
@@ -587,7 +611,7 @@ img {
   transform: scale(1.2);
 }
 
-/* Vor- und Zurück-Buttons */
+/* Vor- und Zur�ck-Buttons */
 .slideshow-prev,
 .slideshow-next {
   position: absolute;
@@ -654,7 +678,7 @@ img {
   opacity: 0.9;
 }
 
-/* Responsive Anpassungen für die Slideshow */
+/* Responsive Anpassungen f�r die Slideshow */
 @media (max-width: 768px) {
   .slideshow-container {
     height: 400px;
@@ -684,38 +708,70 @@ img {
 }
 
 /* ============================= */
-/*   Footer                      */
+/*   Content Styling             */
 /* ============================= */
-nav ul li a:hover {
-  color: var(--accent-color);
-  background-color: rgba(255, 255, 255, 0.1);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Spenden Button Styling */
-nav ul li a.donate-button {
-  background-color: #e63946;
-  color: white !important;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  margin-left: 10px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.content {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
 }
 
-nav ul li a.donate-button:hover {
-  background-color: #c1121f;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.text-content {
+  line-height: 1.8;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
 }
+
+.text-center {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.text-center::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 0.5rem auto 0;
+}
+
+/* ============================= */
+/*   Footer (full width)         */
+/*   - Hintergrund und Inhalt    */
+/*     erstrecken sich komplett  */
+/* ============================= */
 
 footer {
-  background: var(--dark-color);
-  color: rgba(255, 255, 255, 0.8);
-  padding: 4rem 0 2rem;
+  /* full width background */
   position: relative;
-  overflow: hidden;
+  left: 50%;
+  right: auto;
+  width: 100vw;
+  margin-left: -50vw;
+  padding: 2.5rem 0;
+  text-align: center;
+  color: #fff;
+  z-index: 50;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+/* dekorativer Trennstreifen oben im Footer */
 footer::before {
   content: '';
   position: absolute;
@@ -724,41 +780,49 @@ footer::before {
   right: 0;
   height: 4px;
   background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--secondary-color));
+  z-index: 2;
 }
 
+/* WARNING: Der Footer-Container ist bewusst auf volle Breite gesetzt,
+   damit auch der Inhalt komplett �ber die ganze Seite geht. */
+footer .container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+/* Footer-Inhalt nimmt volle Breite */
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.footer-column h3 {
-  color: white;
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 1rem 24px; /* Abstand links/rechts, damit Inhalt nicht an den Rand klebt */
   position: relative;
-  padding-bottom: 0.8rem;
+  z-index: 3;
+  align-items: start;
 }
 
-.footer-column h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50px;
-  height: 2px;
-  background: var(--accent-color);
+/* �berschriften & Texte im Footer \u2013 wei�en Text verwenden */
+.footer-column h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .footer-column p {
   margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
 }
 
+/* Links & Social */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -766,11 +830,11 @@ footer::before {
 }
 
 .footer-links li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255,255,255,0.9);
   text-decoration: none;
   transition: var(--transition);
   display: flex;
@@ -778,8 +842,8 @@ footer::before {
 }
 
 .footer-links a:hover {
-  color: white;
-  padding-left: 5px;
+  color: #fff;
+  padding-left: 6px;
 }
 
 .footer-links i {
@@ -791,35 +855,41 @@ footer::before {
 
 .social-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
 }
 
 .social-links a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 50%;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: var(--transition);
 }
 
 .social-links a:hover {
   background: var(--accent-color);
   transform: translateY(-3px);
+  color: #212529;
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.2rem;
+  margin-top: 1.6rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255,255,255,0.8);
+  width: 100%;
+  max-width: none;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
 }
 
 .footer-bottom a {
@@ -829,11 +899,18 @@ footer::before {
 }
 
 .footer-bottom a:hover {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 
-/* Scroll-to-Top Button */
+/* Entferne das vorherige body::after-Fullwidth-Background, kann st�ren */
+body::after {
+  display: none;
+}
+
+/* ============================= */
+/*   Scroll-to-Top Button        */
+/* ============================= */
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
@@ -865,4 +942,27 @@ footer::before {
   background: var(--secondary-color);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Tweaks f�r Footer (kleine Bildschirme) */
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    padding: 1rem 16px;
+  }
+
+  footer .container,
+  .footer-bottom {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--secondary-color));
 }
