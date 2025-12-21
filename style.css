@@ -32,6 +32,9 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -113,11 +116,16 @@ header.hero {
   text-align: center;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   width: 100%;
   overflow: hidden;
   margin: 0;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
 }
 
 header.hero::before {
@@ -194,6 +202,7 @@ nav .container {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  text-align: center;
 }
 
 nav ul {
@@ -222,6 +231,7 @@ nav ul > li > a {
   letter-spacing: 0.5px;
   transition: var(--transition);
   position: relative;
+  text-align: center;
 }
 
 nav ul > li > a::after {
@@ -248,7 +258,7 @@ nav ul > li.active > a {
   background: transparent;
 }
 
-/* Dropdown Untermen� */
+/* Dropdown Untermenü */
 nav ul li .dropdown-content {
   display: none;
   position: absolute;
@@ -263,6 +273,7 @@ nav ul li .dropdown-content {
   transform: translateY(10px);
   transition: all 0.3s ease;
   pointer-events: none;
+  text-align: center;
 }
 
 nav ul li .dropdown-content li a {
@@ -274,6 +285,7 @@ nav ul li .dropdown-content li a {
   font-size: 0.95rem;
   transition: var(--transition);
   border-left: 3px solid transparent;
+  text-align: center;
 }
 
 nav ul li .dropdown-content li a:hover {
@@ -332,6 +344,7 @@ nav ul li:hover > .dropdown-content {
     transition: transform 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
+    text-align: center;
   }
   
   nav ul.show {
@@ -346,6 +359,7 @@ nav ul li:hover > .dropdown-content {
     opacity: 1;
     transform: none;
     padding-left: 1.5rem;
+    text-align: center;
   }
   
   nav ul li .dropdown-content.show {
@@ -382,6 +396,7 @@ main {
   padding: 2rem 0;
   background: #f8f9fa;
   min-height: calc(100vh - 400px);
+  text-align: center;
 }
 
 .content-section {
@@ -391,6 +406,7 @@ main {
   padding: 3rem;
   margin-bottom: 2rem;
   transition: var(--transition);
+  text-align: center;
 }
 
 .content-section:hover {
@@ -404,6 +420,7 @@ main {
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.8rem;
+  text-align: center;
 }
 
 .section-title::after {
@@ -421,14 +438,16 @@ p {
   margin-bottom: 1.5rem;
   color: var(--text-color);
   line-height: 1.8;
+  text-align: center;
 }
 
-/* Grid Layout f�r Inhalte */
+/* Grid Layout für Inhalte */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin: 2rem 0;
+  text-align: center;
 }
 
 .grid-item {
@@ -437,6 +456,7 @@ p {
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   transition: var(--transition);
+  text-align: center;
 }
 
 .grid-item:hover {
@@ -452,12 +472,14 @@ p {
 
 .grid-content {
   padding: 1.5rem;
+  text-align: center;
 }
 
 .grid-content h3 {
   margin-top: 0;
   color: var(--primary-color);
   font-size: 1.4rem;
+  text-align: center;
 }
 
 /* Zitate */
@@ -468,6 +490,7 @@ blockquote {
   background: #f8f9fa;
   font-style: italic;
   position: relative;
+  text-align: center;
 }
 
 blockquote::before {
@@ -485,6 +508,7 @@ blockquote p {
   margin: 0;
   font-size: 1.1rem;
   color: var(--dark-color);
+  text-align: center;
 }
 
 blockquote footer {
@@ -524,6 +548,7 @@ blockquote footer {
   font-size: 0.9rem;
   color: var(--text-light);
   font-style: italic;
+  text-align: center;
 }
 
 /* Responsive Bilder */
@@ -533,17 +558,17 @@ img {
   vertical-align: middle;
 }
 
-/* Abgerundete Ecken f�r Bilder */
+/* Abgerundete Ecken für Bilder */
 .rounded {
   border-radius: 10px;
 }
 
-/* Schatten f�r Bilder */
+/* Schatten für Bilder */
 .shadow {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover-Effekt f�r Bilder */
+/* Hover-Effekt für Bilder */
 .hover-zoom {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -565,6 +590,7 @@ img {
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   background: #f5f5f5;
+  text-align: center;
 }
 
 .slideshow-container img {
@@ -581,7 +607,7 @@ img {
   z-index: 1;
 }
 
-/* Navigation f�r die Slideshow */
+/* Navigation für die Slideshow */
 .slideshow-nav {
   position: absolute;
   bottom: 20px;
@@ -591,6 +617,7 @@ img {
   justify-content: center;
   z-index: 10;
   gap: 10px;
+  text-align: center;
 }
 
 .slideshow-nav button {
@@ -611,7 +638,7 @@ img {
   transform: scale(1.2);
 }
 
-/* Vor- und Zur�ck-Buttons */
+/* Vor- und Zurück-Buttons */
 .slideshow-prev,
 .slideshow-next {
   position: absolute;
@@ -670,15 +697,17 @@ img {
   margin: 0 0 0.5rem;
   font-size: 1.3rem;
   color: white;
+  text-align: center;
 }
 
 .slideshow-caption p {
   margin: 0;
   font-size: 0.95rem;
   opacity: 0.9;
+  text-align: center;
 }
 
-/* Responsive Anpassungen f�r die Slideshow */
+/* Responsive Anpassungen für die Slideshow */
 @media (max-width: 768px) {
   .slideshow-container {
     height: 400px;
@@ -714,12 +743,14 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  text-align: center;
 }
 
 .content {
   margin: 2rem auto;
   max-width: 800px;
   padding: 0 1rem;
+  text-align: center;
 }
 
 .text-content {
@@ -769,6 +800,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 /* dekorativer Trennstreifen oben im Footer */
