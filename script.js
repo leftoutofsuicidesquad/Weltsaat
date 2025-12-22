@@ -1,5 +1,47 @@
-// Noch leer – später für Interaktivität (z.B. Animationen, Menüs, Formulare)
-console.log("Weltsaat e.V. Nichts wächst besser als Nächstenliebe.");
+// Theme-Switching-Logik
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const lightIcon = document.querySelector('.light-icon');
+  const darkIcon = document.querySelector('.dark-icon');
+
+  // Beim Laden prüfen, ob ein Theme im localStorage gespeichert ist
+  const savedTheme = localStorage.getItem('theme') || 
+                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
+
+  // Theme wechseln
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  });
+
+  // Icon je nach Theme aktualisieren
+  function updateThemeIcon(theme) {
+    if (theme === 'dark') {
+      lightIcon.style.display = 'none';
+      darkIcon.style.display = 'inline';
+    } else {
+      lightIcon.style.display = 'inline';
+      darkIcon.style.display = 'none';
+    }
+  }
+
+  // Auf Änderungen des System-Farbthemas reagieren
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) { // Nur wenn der Benutzer noch nicht manuell gewechselt hat
+      const newTheme = e.matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      updateThemeIcon(newTheme);
+    }
+  });
+
+  console.log("Weltsaat e.V. – Theme-Switcher geladen");
+});
 
 
 // Slideshow für Weltsaat e.V.
