@@ -283,9 +283,14 @@ nav ul > li.active > a {
   background: transparent;
 }
 
-/* Dropdown Untermenü */
+/* Dropdown Menu */
+nav > ul > li {
+  position: relative;
+  display: inline-block;
+}
+
 nav ul li .dropdown-content {
-  display: none;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   left: 0;
@@ -298,7 +303,16 @@ nav ul li .dropdown-content {
   transform: translateY(10px);
   transition: all 0.3s ease;
   pointer-events: none;
-  text-align: center;
+  padding: 0.5rem 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li .dropdown-content li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 nav ul li .dropdown-content li a {
@@ -307,22 +321,25 @@ nav ul li .dropdown-content li a {
   color: var(--text-color);
   font-weight: 400;
   text-transform: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: var(--transition);
   border-left: 3px solid transparent;
-  text-align: center;
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav ul li .dropdown-content li a:hover {
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(0, 0, 0, 0.05);
   color: var(--primary-color);
   padding-left: 1.8rem;
   border-left-color: var(--accent-color);
+  text-decoration: none;
 }
 
-/* Anzeigen beim Hover */
-nav ul li:hover > .dropdown-content {
-  display: block;
+nav ul li:hover .dropdown-content {
+  visibility: visible;
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
