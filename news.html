@@ -3,74 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weltsaat e.V.</title>
+  <title>News - Weltsaat e.V.</title>
+  <meta name="description" content="Aktuelle Nachrichten und Entwicklungen des Vereins Weltsaat e.V.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header mit Titelbild -->
   <header class="hero">
-    <img src="ws.png" alt="Weltsaat e.V. Titelbild">
+    <img src="ws.png" alt="Weltsaat e.V. Logo">
     <h1>Weltsaat e.V.</h1>
-    <p>Nichts wächst besser als Nächstenliebe</p>
+    <p>Nicht wächst besser als Nächstenliebe</p>
   </header>
 
-  <!-- Navigation -->
-<nav>
-  <ul>
-    <li><a href="/">Startseite</a></li>
-
-    <li>
-      <a href="#">Verein &#9662;</a>
-      <ul class="dropdown-content">
-        <li><a href="https://raw.githubusercontent.com/leftoutofsuicidesquad/Weltsaat/main/Flyer%20Endfassung.pdf">Flyer</a></li>
-        <li><a href="https://raw.githubusercontent.com/leftoutofsuicidesquad/Weltsaat/main/mitgliedsantrag.PDF">Mitgliedsantrag</a></li>
-        <li><a href="https://raw.githubusercontent.com/leftoutofsuicidesquad/Weltsaat/main/Satzung%2014.07.2025.pdf">Satzung</a></li>
-        <li><a href="/vorstand.html">Vorstand</a></li>
+  <nav class="navbar" aria-label="Hauptnavigation">
+    <div class="nav-container">
+      <button class="nav-toggle" aria-expanded="false" aria-label="Navigation öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Startseite</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link">Verein &#9662;</a>
+          <ul class="dropdown-content">
+            <li><a href="Flyer Endfassung.pdf" target="_blank" rel="noopener">Flyer</a></li>
+            <li><a href="mitgliedsantrag.PDF" target="_blank" rel="noopener">Mitgliedsantrag</a></li>
+            <li><a href="Satzung 14.07.2025.pdf" target="_blank" rel="noopener">Satzung</a></li>
+            <li><a href="vorstand.html">Vorstand</a></li>
+          </ul>
+        </li>
+        <li><a href="grusswort.html" class="nav-link">Grußwort</a></li>
+        <li><a href="news.html" class="nav-link active">News</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link">Projekte &#9662;</a>
+          <ul class="dropdown-content">
+            <li><a href="projekte.html">Projekte in Planung</a></li>
+            <li><a href="abgprojekte.html">Abgerechnete Projekte</a></li>
+            <li><a href="laufendeprojekte.html">Laufende Projekte</a></li>
+          </ul>
+        </li>
+        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+        <li><a href="spenden.html" class="nav-link donate-button">Spenden</a></li>
       </ul>
-    </li>
+    </div>
+  </nav>
 
-    <li><a href="/grusswort.html">Grußwort</a></li>
-    <li><a href="/news.html">News</a></li>
+  <main class="main-content">
+    <div class="content-wrapper">
+      <section class="content-section">
+        <h1 class="section-title-large">News</h1>
 
-    <li>
-      <a href="#">Projekte &#9662;</a>
-      <ul class="dropdown-content">
-        <li><a href="/projekte.html">Projekte in Planung</a></li>
-        <li><a href="/abgprojekte.html">Abgerechnete Projekte</a></li>
-        <li><a href="/abgeprojekte.html">Abgeschlossene Projekte</a></li>
-      </ul>
-    </li>
-    <li><a href="/kontakt.html">Kontakt</a></li>
-    <li><a href="/spenden.html" class="donate-button">Spenden</a></li>
-  </ul>
-</nav>
+        <div id="news-list">
+          <!-- Artikel 1: Josephs-Brunnen (vollständig) -->
+          <article class="news-article" data-full="news-1-full">
+            <h2>Projekt Josephs-Brunnen ist gestartet</h2>
+            <p class="news-meta">15.01.2026</p>
+            <p class="news-preview">Mittlerweile ist das Projekt „Neue Fenster für die Francis-Xavier-Schule" in Fort Portal / Uganda vollständig verwirklicht und alle Fenster und Scheiben sind in der Schule eingesetzt. Wir danken allen Spendern, die dies mit Ihrer finanziellen Unterstützung ermöglicht haben.</p>
+            <a href="#" class="news-more" data-target="news-1-full">Mehr anzeigen →</a>
+            <div id="news-1-full" class="news-full-content" style="display:none;">
+              <p>Zeitgleich wurde das Projekt „Josephs-Brunnen" gestartet. Die Bohrungen des Brunnenschachtes sind bereits in vollem Gange. Grundsätzlich gibt es durch das tropische Klima genug Feuchtigkeit, jedoch ist die Wasserversorgung mit sauberem Wasser durch ein strukturell schwaches Leitungsnetz nicht immer gewährleistet und zudem sehr teuer. Mit dem Josephsbrunnen sollen nun die Schulen, Kindergärten und die Krankenstation verlässlich mit Wasser versorgt werden können. Auch die Bevölkerung soll sich bei Wasserknappheit mit Wasser vom Brunnen versorgen können. Diese Maßnahme ist mit einer Summe von rund 3.500–5.000 Euro veranschlagt.</p>
+              <div class="image-section">
+                <img src="bilder/josephsbrunnen.png" alt="Josephs-Brunnen Projekt" class="main-image">
+              </div>
+            </div>
+          </article>
 
-<!-- Theme Toggle Button -->
-<button id="theme-toggle" aria-label="Theme wechseln" class="theme-toggle">
-  <span class="light-icon">🌞</span>
-  <span class="dark-icon" style="display: none;">🌙</span>
-</button>
+          <!-- Artikel 2 -->
+          <article class="news-article" data-full="news-2-full">
+            <h2>Delegationsreise Mai 2025 – Rückblick</h2>
+            <p class="news-meta">10.06.2025</p>
+            <p class="news-preview">Im Mai 2025 reiste eine Delegation des Vereins nach Uganda und Burkina Faso, um die laufenden Projekte vor Ort zu begutachten. Die Impressionen der Reise zeigen die vielfältige Arbeit der Partnerorganisationen.</p>
+            <a href="#" class="news-more" data-target="news-2-full">Mehr anzeigen →</a>
+            <div id="news-2-full" class="news-full-content" style="display:none;">
+              <p>Die Delegation besuchte die Kyamatanga-Pfarrei in Fort Portal, die Francis-Xavier-Schule sowie das geplante Grundstück für die Hühnerzucht in Ouagadougou. Alle Projekte wurden vor Ort begutachtet und mit den lokalen Partnern abgestimmt. Die Reise bestätigte die Dringlichkeit der geplanten Maßnahmen.</p>
+              <div class="image-gallery">
+                <img src="bilder/1.jpg" alt="Delegationsreise Uganda">
+                <img src="bilder/2.jpg" alt="Delegationsreise Burkina Faso">
+              </div>
+            </div>
+          </article>
 
-<!-- Hauptinhalt -->
-  <main class="container">
-    <section class="content">
-      <h2>Projekt Josephs-Brunnen ist gestartet</h2>
-      
-      <div class="news-article">
-        <p>GERSTETTEN, 15.01. 26 Mittlerweile ist das Projekt „Neue Fenster für die Francis-Xavier-Schule" in Fort Portal/ Uganda vollständig verwirklicht und alle Fenster und Scheiben sind in der Schule eingesetzt. Wir danken allen Spendern, die dies mit Ihrer finanziellen Unterstützung ermöglicht haben. Lernen ist nicht nur in Europa- sondern besonders auch in Afrika- ein wichtiger Baustein um Not zu überwinden.</p>
-        
-        <p>Zeitgleich wurde das Projekt „Josephs-Brunnen" gestartet. Die Bohrungen des Brunnenschachtes sind bereits in vollem Gange. Grundsätzlich gibt es durch das tropisches Klima genug Feuchtigkeit, jedoch ist die Wasserversorgung mit sauberem durch ein strukturell schwaches Leitungsnetz nicht immer gewährleistet und zudem sehr teuer. Mit dem Josephsbrunnen sollen nun die Schulen/Kindergärten und die Krankenstation verlässlich mit Wasser versorgt werden können. Auch die Bevölkerung soll sich bei Wasserknappheit mit Wasser vom Brunnen versorgen können. Diese Maßnahme ist mit einer Summe von rund 3.500- 5.000 Euro veranschlagt.</p>
-        
-        <div class="news-image">
-          <img src="bilder/josephsbrunnen.png" alt="Josephs-Brunnen Projekt">
+          <!-- Artikel 3 -->
+          <article class="news-article" data-full="news-3-full">
+            <h2>Vereinsgründung am 24. Februar 2025</h2>
+            <p class="news-meta">24.02.2025</p>
+            <p class="news-preview">Der Verein Weltsaat e.V. wurde am 24. Februar 2025 in Gerstetten gegründet. Ziel des Vereins ist die Unterstützung von Hilfsprojekten in Uganda, Burkina Faso und Nigeria.</p>
+            <a href="#" class="news-more" data-target="news-3-full">Mehr anzeigen →</a>
+            <div id="news-3-full" class="news-full-content" style="display:none;">
+              <p>Bei der Gründungsversammlung im Februar 2025 in Gerstetten wurde der Vorstand gewählt und die Satzung beschlossen. Der Verein ist seit dem 14.07.2025 im Vereinsregister Ulm unter VR 722931 eingetragen. Die ersten Mitgliedsanträge wurden bereits entgegengenommen.</p>
+            </div>
+          </article>
+
+          <!-- Artikel 4 -->
+          <article class="news-article" data-full="news-4-full">
+            <h2>Neue Mitgliedsanträge online</h2>
+            <p class="news-meta">20.02.2025</p>
+            <p class="news-preview">Interessierte können den Mitgliedsantrag nun bequem online ausfüllen und ausdrucken. Die Beitrittserklärung ist als PDF auf unserer Website verfügbar.</p>
+            <a href="#" class="news-more" data-target="news-4-full">Mehr anzeigen →</a>
+            <div id="news-4-full" class="news-full-content" style="display:none;">
+              <p>Der Mitgliedsantrag steht als PDF zum Download bereit. Die Mitgliedschaft kostet 30 Euro pro Jahr und kann formlos per E-Mail oder Post beantragt werden. Mitglieder erhalten regelmäßige Projektberichte und Einladungen zur Mitgliederversammlung.</p>
+            </div>
+          </article>
+
+          <!-- Artikel 5 -->
+          <article class="news-article" data-full="news-5-full">
+            <h2>Erste Spenden eingetroffen</h2>
+            <p class="news-meta">15.02.2025</p>
+            <p class="news-preview">Noch vor der offiziellen Gründung kamen erste Spenden für die geplanten Hilfsprojekte ein. Der erste Betrag wurde bereits an die Kyamatanga-Pfarrei in Uganda überwiesen.</p>
+            <a href="#" class="news-more" data-target="news-5-full">Mehr anzeigen →</a>
+            <div id="news-5-full" class="news-full-content" style="display:none;">
+              <p>Dank großzügiger Gönner konnten bereits vor der offiziellen Vereinsgründung erste Gelder für die Kyamatanga-Pfarrei in Fort Portal überwiesen werden. Diese Unterstützung ermöglichte den Start der Planungen für den Josephs-Brunnen.</p>
+            </div>
+          </article>
+
+          <!-- Artikel 6 -->
+          <article class="news-article" data-full="news-6-full">
+            <h2>Planung der ersten Projekte</h2>
+            <p class="news-meta">10.02.2025</p>
+            <p class="news-preview">In den ersten Wochen wurden die ersten Projekte geplant: Containerlieferung, Hühnerzucht in Burkina Faso, Landwirtschaft und Brunnenbau in Uganda sowie Priesterpatenschaften.</p>
+            <a href="#" class="news-more" data-target="news-6-full">Mehr anzeigen →</a>
+            <div id="news-6-full" class="news-full-content" style="display:none;">
+              <p>Die Projektplanung umfasst fünf Hauptbereiche für 2025/2026: (1) Containerlieferung mit Hilfsgütern, (2) Hühner- und Fischzucht in Burkina Faso, (3) Landwirtschaft und Brunnenbau in Uganda, (4) Gästezimmer in Fort Portal, (5) Priesterpatenschaften. Details finden Sie auf der <a href="projekte.html">Projektseite</a>.</p>
+            </div>
+          </article>
         </div>
-      </div>
 
-      
-      <footer>
-        <p>&copy; 2026 Weltsaat e.V. | <a href="/impressum.html">Impressum</a></p>
-      </footer>
+        <div id="news-pagination" class="news-pagination"></div>
+      </section>
+    </div>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Weltsaat e.V. | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </div>
+  </footer>
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Dunkles Theme aktivieren">
+    <span class="light-icon" aria-hidden="true">🌞</span>
+    <span class="dark-icon" style="display: none;" aria-hidden="true">🌙</span>
+  </button>
+
+  <script src="nav.js"></script>
   <script src="script.js"></script>
+  <script src="news.js"></script>
+  <script>
+  // News-Artikel Expand/Collapse
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.news-more').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const fullContent = document.getElementById(targetId);
+        if (fullContent) {
+          const isOpen = fullContent.style.display !== 'none';
+          fullContent.style.display = isOpen ? 'none' : 'block';
+          this.textContent = isOpen ? 'Mehr anzeigen →' : 'Weniger anzeigen ↑';
+        }
+      });
+    });
+  });
+  </script>
 </body>
 </html>

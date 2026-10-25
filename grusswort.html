@@ -3,79 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weltsaat e.V.</title>
+  <title>Grußwort - Weltsaat e.V.</title>
+  <meta name="description" content="Grußwort des Vereins Weltsaat e.V. aus Gerstetten.">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
-  <!-- Header mit Titelbild -->
   <header class="hero">
-    <img src="ws.png" alt="Weltsaat e.V. Titelbild">
+    <img src="ws.png" alt="Weltsaat e.V. Logo">
     <h1>Weltsaat e.V.</h1>
-    <p>Nichts wächst besser als Nächstenliebe</p>
+    <p>Nicht wächst besser als Nächstenliebe</p>
   </header>
 
-  <!-- Navigation -->
-<nav>
-  <ul>
-    <li><a href="/">Startseite</a></li>
-
-    <li>
-      <a href="#">Verein &#9662;</a>
-      <ul class="dropdown-content">
-        <li><a href="https://raw.githubusercontent.com/leftoutofsuicidesquad/Weltsaat/main/Flyer%20Endfassung.pdf">Flyer</a></li>
-        <li><a href="https://raw.githubusercontent.com/leftoutofsuicidesquad/Weltsaat/main/mitgliedsantrag.PDF">Mitgliedsantrag</a></li>
-        <li><a href="https://raw.githubusercontent.com/leftoutofsuicidesquad/Weltsaat/main/Satzung%2014.07.2025.pdf">Satzung</a></li>
-        <li><a href="/vorstand.html">Vorstand</a></li>
+  <nav class="navbar" aria-label="Hauptnavigation">
+    <div class="nav-container">
+      <button class="nav-toggle" aria-expanded="false" aria-label="Navigation öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Startseite</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link">Verein &#9662;</a>
+          <ul class="dropdown-content">
+            <li><a href="Flyer Endfassung.pdf" target="_blank" rel="noopener">Flyer</a></li>
+            <li><a href="mitgliedsantrag.PDF" target="_blank" rel="noopener">Mitgliedsantrag</a></li>
+            <li><a href="Satzung 14.07.2025.pdf" target="_blank" rel="noopener">Satzung</a></li>
+            <li><a href="vorstand.html">Vorstand</a></li>
+          </ul>
+        </li>
+        <li><a href="grusswort.html" class="nav-link active">Grußwort</a></li>
+        <li><a href="news.html" class="nav-link">News</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link">Projekte &#9662;</a>
+          <ul class="dropdown-content">
+            <li><a href="projekte.html">Projekte in Planung</a></li>
+            <li><a href="abgprojekte.html">Abgerechnete Projekte</a></li>
+            <li><a href="laufendeprojekte.html">Laufende Projekte</a></li>
+          </ul>
+        </li>
+        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+        <li><a href="spenden.html" class="nav-link donate-button">Spenden</a></li>
       </ul>
-    </li>
+    </div>
+  </nav>
 
-    <li><a href="/grusswort.html">Grußwort</a></li>
-    <li><a href="/news.html">News</a></li>
+  <main class="main-content">
+    <div class="content-wrapper">
+      <section class="content-section">
+        <h1 class="section-title-large">Grußwort</h1>
 
-    <li>
-      <a href="#">Projekte &#9662;</a>
-      <ul class="dropdown-content">
-        <li><a href="/projekte.html">Projekte in Planung</a></li>
-        <li><a href="/abgprojekte.html">Abgerechnete Projekte</a></li>
-        <li><a href="/abgeprojekte.html">Abgeschlossene Projekte</a></li>
-      </ul>
-    </li>
-    <li><a href="/kontakt.html">Kontakt</a></li>
-    <li><a href="/spenden.html" class="donate-button">Spenden</a></li>
-  </ul>
-</nav>
+        <div style="text-align:center;margin-bottom:2rem;">
+          <img src="herz.png" alt="Herzspende" style="max-width:200px;height:auto;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        </div>
 
-  <main class="container">
-    <section class="content">
-      <h2>Grußwort</h2>
-      <div class="grussfoto" style="text-align:center;margin-top:30px;">
-      <img src="herz.png" alt="Herzspende" style="max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);margin-bottom:20px;">
-      </div>
-      <p><strong>HELFEN, WEIL WIR GAR NICHT ANDERS WOLLEN…</strong></p>
-      <p>„Man kann nicht allen helfen! sagt der Engherzige und – hilft keinem“ Diese Gedanken stammen von der österr. Schriftstellerin Maria von Ebner‑Eschenbach. Vielleicht haben Sie diesen Satz sinngemäß so auch schon mal gehört.</p>
-      <p>Aber Moment mal, ist die Kernaussage dieses Satzes wirklich engherzig? Steckt da nicht einfach nur Realismus und Lebenserfahrung dahinter? Jeder der auch nur ein klein wenig Einblick in die Lebenswirklichkeit anderer Kontinente hat, weiß, dass Hilfe an vielen Orten dringend notwendig und sinnvoll wäre. Der Bedarf für Hilfe erscheint ja geradezu riesengroß.</p>
-      <p><strong>Man kann nicht allen helfen! sagt der Großherzige und – fängt dennoch damit an.</strong> – das ist die Antwort unseres Vereines „Weltsaat“ auf die Not, die an vielen Stellen dieser Welt herrscht. Und so haben wir kurzerhand im Februar dieses Jahres den Verein Weltsaat e.V. – nichts wächst besser als Nächstenliebe – gegründet, um die Hilfe künftig professioneller organisieren und administrieren zu können.</p>
-      <p>Wie, noch ein Hilfsverein? Ja sicher. Uns Gründern und vielen Freunden des Vereines ist es wichtig, dass sich die Hilfe nicht nur auf das Materielle beschränkt. Vielmehr sind wir geprägt vom Gedanken der Weltkirche. Weltkirche bezeichnet die weltweite Glaubensgemeinschaft aller Katholiken, deren Einheit durch den Bischof von Rom, dem Papst, repräsentiert wird. Die Weltkirche versteht sich als Gebets‑, Solidar‑ und Lerngemeinschaft. Auch wenn viele unserer Mitglieder katholischen Hintergrund oder Wurzeln haben, ist Weltsaat e.V. überkonfessionell tätig und unterstützt die Menschen vor Ort nach ihren Bedürfnissen und unabhängig ihrer Religionszugehörigkeit.</p>
-      <p>Man kann nicht allen helfen! sagt der Großherzige und – fängt dennoch damit in Burkina Faso, Nigeria und Uganda an.</p>
-      <p>Sie möchten unsere Projekte unterstützen oder sogar mitarbeiten? Kommen Sie gerne auf uns zu.</p>
-      <p>Herzlichst Ihr</p>
-      <div class="grussbild" style="text-align:center;margin-top:20px;">
-        <img src="us.png" alt="Unterschrift" style="max-width:200px;height:auto;display:block;margin:0 auto 10px;">
-        <p><strong>Gerd Eckhardt</strong></p>
-      </div>
-    </section>
+        <div class="text-content">
+          <p><strong>HELFEN, WEIL WIR GAR NICHT ANDERS WOLLEN…</strong></p>
+          <p>„Man kann nicht allen helfen! sagt der Engherzige und – hilft keinem“ Diese Gedanken stammen von der österr. Schriftstellerin Maria von Ebner‑Eschenbach. Vielleicht haben Sie diesen Satz sinngemäß so auch schon mal gehört.</p>
+          <p>Aber Moment mal, ist die Kernaussage dieses Satzes wirklich engherzig? Steckt da nicht einfach nur Realismus und Lebenserfahrung dahinter? Jeder der auch nur ein klein wenig Einblick in die Lebenswirklichkeit anderer Kontinente hat, weiß, dass Hilfe an vielen Orten dringend notwendig und sinnvoll wäre. Der Bedarf für Hilfe erscheint ja geradezu riesengroß.</p>
+          <p><strong>Man kann nicht allen helfen! sagt der Großherzige und – fängt dennoch damit an.</strong> – das ist die Antwort unseres Vereines „Weltsaat“ auf die Not, die an vielen Stellen dieser Welt herrscht. Und so haben wir kurzerhand im Februar dieses Jahres den Verein Weltsaat e.V. – nichts wächst besser als Nächstenliebe – gegründet, um die Hilfe künftig professioneller organisieren und administrieren zu können.</p>
+          <p>Wie, noch ein Hilfsverein? Ja sicher. Uns Gründern und vielen Freunden des Vereines ist es wichtig, dass sich die Hilfe nicht nur auf das Materielle beschränkt. Vielmehr sind wir geprägt vom Gedanken der Weltkirche. Weltkirche bezeichnet die weltweite Glaubensgemeinschaft aller Katholiken, deren Einheit durch den Bischof von Rom, dem Papst, repräsentiert wird. Die Weltkirche versteht sich als Gebets‑, Solidar‑ und Lerngemeinschaft. Auch wenn viele unserer Mitglieder katholischen Hintergrund oder Wurzeln haben, ist Weltsaat e.V. überkonfessionell tätig und unterstützt die Menschen vor Ort nach ihren Bedürfnissen und unabhängig ihrer Religionszugehörigkeit.</p>
+          <p>Man kann nicht allen helfen! sagt der Großherzige und – fängt dennoch damit in Burkina Faso, Nigeria und Uganda an.</p>
+          <p>Sie möchten unsere Projekte unterstützen oder sogar mitarbeiten? Kommen Sie gerne auf uns zu.</p>
+          <p>Herzlichst Ihr</p>
+        </div>
+
+        <div style="text-align:center;margin-top:2rem;">
+          <img src="us.png" alt="Unterschrift" style="max-width:200px;height:auto;display:block;margin:0 auto 10px;">
+          <p><strong>Gerd Eckhardt</strong></p>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <p>&copy; Weltsaat e.V. — Stand: 2026</p>
+      <p>&copy; 2026 Weltsaat e.V. | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
-  <script src="script.js"></script>
-  <!-- Theme Toggle Button -->
-  <button id="theme-toggle" aria-label="Theme wechseln" class="theme-toggle">
-    <span class="light-icon">🌞</span>
-    <span class="dark-icon" style="display: none;">🌙</span>
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Dunkles Theme aktivieren">
+    <span class="light-icon" aria-hidden="true">🌞</span>
+    <span class="dark-icon" style="display: none;" aria-hidden="true">🌙</span>
   </button>
+
+  <script src="nav.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
