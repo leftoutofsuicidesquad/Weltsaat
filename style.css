@@ -1017,11 +1017,26 @@ main {
 
 .news-pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
   margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
   list-style: none;
   padding: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .news-pagination {
+    gap: 0.3rem;
+  }
+  .news-page-link {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+  }
 }
 
 .news-page-link {
@@ -1034,6 +1049,7 @@ main {
   text-decoration: none;
   font-size: 0.9rem;
   transition: var(--transition-fast);
+  white-space: nowrap;
 }
 
 .news-page-link:hover:not(.disabled) {
